@@ -1,0 +1,11 @@
+{
+	"item.thetwistedones.twisted_freddy_spawn_egg" : "Twisted Freddy Spawn Egg",
+	"item.thetwistedones.twisted_bonnie_spawn_egg" : "Twisted Bonnie Spawn Egg",
+	"item.thetwistedones.twisted_foxy_spawn_egg" : "Twisted Foxy Spawn Egg",
+	"item.thetwistedones.twisted_wolf_spawn_egg" : "Twisted Wolf Spawn Egg",
+	
+	"entity.thetwistedones.twisted_freddy" : "Twisted Freddy",
+	"entity.thetwistedones.twisted_bonnie" : "Twisted Bonnie",
+	"entity.thetwistedones.twisted_foxy" : "Twisted Foxy",
+	"entity.thetwistedones.twisted_wolf" : "Twisted Wolf"
+}

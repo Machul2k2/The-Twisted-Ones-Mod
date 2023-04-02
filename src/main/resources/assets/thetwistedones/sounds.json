@@ -1,0 +1,26 @@
+{
+		"twisted_freddy_laugh": {
+			"subtitle" : "sounds.thetwistedones.twisted_freddy_laugh",
+			"sounds" : [
+				"thetwistedones:twisted_freddy_laugh_1",
+				"thetwistedones:twisted_freddy_laugh_2",
+				"thetwistedones:twisted_freddy_laugh_3",
+				"thetwistedones:twisted_freddy_laugh_4",
+				"thetwistedones:twisted_freddy_laugh_5"
+			]
+		},
+		
+		"twisted_animatronic_step": {
+			"subtitle" : "sounds.thetwistedones.twisted_animatronic_step",
+			"sounds" : [
+				"thetwistedones:twisted_animatronic_step"
+			]
+		},
+		
+		"twisted_animatronic_death": {
+			"subtitle" : "sounds.thetwistedones.twisted_animatronic_death",
+			"sounds" : [
+				"thetwistedones:twisted_animatronic_death"
+			]
+		}
+}
