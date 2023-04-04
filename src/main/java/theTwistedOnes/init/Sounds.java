@@ -11,6 +11,11 @@ public class Sounds {
 	public static final DeferredRegister<SoundEvent> SOUND_EVENTS = DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, TheTwistedOnes.MODID);
 
 	public static final RegistryObject<SoundEvent> TWISTED_FREDDY_LAUGH = registerSoundEvent("twisted_freddy_laugh");
+	
+	public static final RegistryObject<SoundEvent> TWISTED_BONNIE_AMBIENT = registerSoundEvent("twisted_bonnie_ambient");
+	
+	public static final RegistryObject<SoundEvent> TWISTED_FOXY_YARR = registerSoundEvent("twisted_foxy_yarr");
+	
 	public static final RegistryObject<SoundEvent> TWISTED_ANIMATRONIC_STEP = registerSoundEvent("twisted_animatronic_step");
 	public static final RegistryObject<SoundEvent> TWISTED_ANIMATRONIC_DEATH = registerSoundEvent("twisted_animatronic_death");
 

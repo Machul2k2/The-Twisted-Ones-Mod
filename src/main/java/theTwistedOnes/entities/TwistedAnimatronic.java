@@ -126,10 +126,10 @@ public class TwistedAnimatronic extends Monster implements IAnimatable {
 		return null;
 	}
 	
-//    @Override
-//    protected void playStepSound(BlockPos position, BlockState state) {
-//        this.playSound(Sounds.TWISTED_ANIMATRONIC_STEP.get(), 0.10F, 0.65F);
-//     }
+    @Override
+    protected void playStepSound(BlockPos position, BlockState state) {
+        this.playSound(Sounds.TWISTED_ANIMATRONIC_STEP.get(), 0.50F, 0.50F);
+     }
     
     protected class TwistedAnimatronicMeleeAttackGoal extends MeleeAttackGoal
     {

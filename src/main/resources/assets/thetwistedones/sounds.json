@@ -22,5 +22,22 @@
 			"sounds" : [
 				"thetwistedones:twisted_animatronic_death"
 			]
+		},
+		
+		"twisted_bonnie_ambient": {
+			"subtitle" : "sounds.thetwistedones.twisted_bonnie_ambient",
+			"sounds" : [
+				"thetwistedones:twisted_bonnie_ambient_sound_1",
+				"thetwistedones:twisted_bonnie_ambient_sound_2",
+				"thetwistedones:twisted_bonnie_ambient_sound_3"
+			]
+		},
+		
+		"twisted_foxy_yarr": {
+			"subtitle" : "sounds.thetwistedones.twisted_foxy_yarr",
+			"sounds" : [
+				"thetwistedones:twisted_foxy_yarr_1",
+				"thetwistedones:twisted_foxy_yarr_2"
+			]
 		}
 }

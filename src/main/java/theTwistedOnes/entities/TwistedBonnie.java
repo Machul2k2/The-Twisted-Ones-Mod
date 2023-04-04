@@ -1,5 +1,6 @@
 package theTwistedOnes.entities;
 
+import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
@@ -14,6 +15,7 @@ import software.bernie.geckolib3.core.IAnimatable;
 import software.bernie.geckolib3.core.PlayState;
 import software.bernie.geckolib3.core.builder.AnimationBuilder;
 import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
+import theTwistedOnes.init.Sounds;
 
 public class TwistedBonnie extends TwistedAnimatronic {
 
@@ -69,7 +71,13 @@ public class TwistedBonnie extends TwistedAnimatronic {
 		return super.canDrownInFluidType(type);
 	}
 
-
+	protected SoundEvent getAmbientSound() {
+    	if(!(this.getTarget() == null))
+    	{
+    		return Sounds.TWISTED_BONNIE_AMBIENT.get();
+    	}
+	    return null;
+   }
 	
 
 }
