@@ -1,6 +1,6 @@
 package theTwistedOnes.entities;
 
-import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.Random;
 
 import net.minecraft.core.BlockPos;
@@ -14,6 +14,7 @@ import net.minecraft.world.entity.PathfinderMob;
 import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.Level;
@@ -28,7 +29,9 @@ import software.bernie.geckolib3.core.manager.AnimationFactory;
 import theTwistedOnes.init.Sounds;
 
 public class TwistedAnimatronic extends Monster implements IAnimatable {
-
+	
+	boolean searchingForLand;
+	
 	protected TwistedAnimatronic(EntityType<? extends Monster> type, Level level) {
 		super(type, level);
 	}
@@ -61,7 +64,7 @@ public class TwistedAnimatronic extends Monster implements IAnimatable {
 	@Override
 	protected void onInsideBlock(BlockState state) {
 		Level level = this.level;
-		ArrayList<BlockPos> bp = new ArrayList<BlockPos>();
+		LinkedList<BlockPos> bp = new LinkedList<>();
 		for(int y = 0; y < 4; y++)
 		{
 			bp.add(new BlockPos(this.getBlockX(), this.getBlockY() + y, this.getBlockZ()));
@@ -79,7 +82,7 @@ public class TwistedAnimatronic extends Monster implements IAnimatable {
 			}
 		}
 		
-		ArrayList<BlockState> bs = new ArrayList<BlockState>();
+		LinkedList<BlockState> bs = new LinkedList<>();
 		for(int i = 0; i < 32; i++)
 		{
 			bs.add(level.getBlockState(bp.get(i)));
@@ -95,6 +98,21 @@ public class TwistedAnimatronic extends Monster implements IAnimatable {
 		super.onInsideBlock(state);
 	}
 	
+	public boolean hurt(DamageSource p_31461_, float p_31462_) {
+       Entity entity = p_31461_.getDirectEntity();
+       if (entity instanceof AbstractArrow) {
+          return false;
+       }
+       else
+       {
+    	   return super.hurt(p_31461_, p_31462_);
+       }
+    }
+	
+	@Override
+	public boolean canBreatheUnderwater() {
+		return true;
+	}
 	
 	public void spawnAtLoc(ItemLike item, int amount) {
 		for(int i = amount; i > 0; i--)
@@ -114,6 +132,10 @@ public class TwistedAnimatronic extends Monster implements IAnimatable {
 		}
 		super.dropCustomDeathLoot(source, i, b);
 	}
+	
+	public void setSearchingForLand(boolean p_32399_) {
+	      this.searchingForLand = p_32399_;
+	   }
 
 	@Override
 	protected SoundEvent getHurtSound(DamageSource source) {

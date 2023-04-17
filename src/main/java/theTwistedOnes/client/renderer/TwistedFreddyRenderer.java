@@ -10,7 +10,6 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.resources.ResourceLocation;
 import software.bernie.geckolib3.renderers.geo.GeoEntityRenderer;
-import theTwistedOnes.TheTwistedOnes;
 import theTwistedOnes.client.model.TwistedFreddyModel;
 import theTwistedOnes.entities.TwistedFreddy;
 

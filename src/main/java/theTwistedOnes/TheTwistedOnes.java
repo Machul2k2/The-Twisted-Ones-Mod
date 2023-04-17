@@ -1,7 +1,6 @@
 package theTwistedOnes;
 
 import com.mojang.logging.LogUtils;
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.entity.SpawnPlacements;
 import net.minecraft.world.entity.monster.Monster;
@@ -22,8 +21,6 @@ import theTwistedOnes.client.renderer.TwistedBonnieRenderer;
 import theTwistedOnes.client.renderer.TwistedFoxyRenderer;
 import theTwistedOnes.client.renderer.TwistedFreddyRenderer;
 import theTwistedOnes.client.renderer.TwistedWolfRenderer;
-import theTwistedOnes.entities.TwistedAnimatronic;
-import theTwistedOnes.entities.TwistedFreddy;
 import theTwistedOnes.init.Entities;
 import theTwistedOnes.init.Items;
 import theTwistedOnes.init.Sounds;
@@ -53,7 +50,8 @@ public class TheTwistedOnes
         GeckoLib.initialize();
     }
 
-    private void commonSetup(final FMLCommonSetupEvent event)
+    @SuppressWarnings("deprecation")
+	private void commonSetup(final FMLCommonSetupEvent event)
     {
         LOGGER.info("HELLO FROM COMMON SETUP");
         LOGGER.info("DIRT BLOCK >> {}", ForgeRegistries.BLOCKS.getKey(Blocks.DIRT));

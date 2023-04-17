@@ -1,6 +1,5 @@
 package theTwistedOnes.entities;
 
-import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
@@ -11,7 +10,6 @@ import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.state.BlockState;
 import software.bernie.geckolib3.core.IAnimatable;
 import software.bernie.geckolib3.core.PlayState;
 import software.bernie.geckolib3.core.builder.AnimationBuilder;
@@ -27,11 +25,11 @@ public class TwistedFreddy extends TwistedAnimatronic{
 	@Override
 	public void registerGoals() 
 	{
-		this.goalSelector.addGoal(1, new FloatGoal(this));
+		this.goalSelector.addGoal(3, new FloatGoal(this));
 	    this.goalSelector.addGoal(2, new TwistedAnimatronicMeleeAttackGoal(this, 1.0D, true));
+	    this.goalSelector.addGoal(4, new WaterAvoidingRandomStrollGoal(this, 1.0D));
 	    this.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, Player.class, true));
 	    this.targetSelector.addGoal(3, new HurtByTargetGoal(this));
-	    this.goalSelector.addGoal(4, new WaterAvoidingRandomStrollGoal(this, 1.0D));
 	}
 	
 	public static AttributeSupplier.Builder registerAttributes() {
